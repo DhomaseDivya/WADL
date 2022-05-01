@@ -1,0 +1,62 @@
+<div class="login_frame row container-fluid">
+    <div id="form_placeholder" class="col-md-6">
+        <h1 id="header">REGISTRATION</h1>
+        <form id="login_details">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="username"     
+                    placeholder="Enter username"
+                    required
+                    #username
+                >
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="age"     
+                    placeholder="Enter age"
+                    required
+                    min="18"
+                    #age
+                >
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="password" 
+                    placeholder="Password"
+                    required
+                    #password
+                >
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input 
+                    type="confirm_password" 
+                    class="form-control" 
+                    id="password" 
+                    placeholder="Password"
+                    required
+                    #confirm_password
+                >
+            </div>
+            <button 
+                type="submit" 
+                class="btn btn-primary"
+                (click)="register(username.value, age.value, password.value, confirm_password.value)">
+                Submit
+            </button>
+            <br>
+            <br>
+            <div class="form-group">Already a user? <a href="/login">Sign In</a></div>
+        </form>
+    </div>
+</div>
+
